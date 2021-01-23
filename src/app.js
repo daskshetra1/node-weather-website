@@ -69,13 +69,6 @@ app.get('/weather', (req, res) => {
             })
         })
     })
-    
-    // console.log(req.query.search)
-    // res.send({
-    //     forcast: 'It snowing out side!',
-    //     location: 'Philadelphia',
-    //     search: req.query.search 
-    // })
 })
 
 
