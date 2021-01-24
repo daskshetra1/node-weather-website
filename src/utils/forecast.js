@@ -9,12 +9,7 @@ const forecast = (latitude , longitued, callback) => {
         } else if(body.error) {
             callback('Unable to find Location! Please try another Search!', undefined);
         } else {
-            // callback(undefined, {
-            //     placename : response.body.current.weather_descriptions[0],
-            //     Temperature : response.body.current.temperature,
-            //     Rainchance : response.body.current.precip
-            // })
-            callback(undefined, body.current.weather_descriptions[0] +' It is Currently '+ body.current.temperature + ' degrees Out.' + ' There is ' + body.current.precip + '% chance of rain.');
+            callback(undefined, body.current.weather_descriptions[0] +' It is Currently '+ body.current.temperature + ' degrees Out.' + ' There is ' + body.current.precip + '% chance of rain. ' + 'And the humidity will be ' + body.current.humidity + '%. ' + 'It feels like' + body.current.feelslike + ' digress out.');
         }
     })
 }
